@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.pucpr.prog4.lojavirtual;
+package br.pucpr.prog4.lojavirtual.controllers;
 
 import br.pucpr.prog4.lojavirtual.models.IProdutoManager;
 import br.pucpr.prog4.lojavirtual.models.Produto;
@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author emanoelle.stival
  */
-public class LojaVirtual extends HttpServlet {
+public class ProdutoListaServlet extends HttpServlet {
 
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

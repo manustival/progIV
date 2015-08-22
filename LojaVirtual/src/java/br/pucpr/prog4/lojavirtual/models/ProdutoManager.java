@@ -14,10 +14,10 @@ import java.util.List;
  * @author emanoelle.stival
  */
 public class ProdutoManager implements IProdutoManager{
-
-    @Override
-    public List<Produto> obterTodos() {
-        List<Produto> produtos;
+    
+    private static List<Produto> produtos;
+    
+    static{
         produtos = new ArrayList<>();
         Produto p1 = new Produto();
         p1.setId(1);
@@ -41,8 +41,20 @@ public class ProdutoManager implements IProdutoManager{
         produtos.add(p3);
         
         
-        return produtos;
         
+    }
+    public List<Produto> obterTodos() {
+        return produtos;
+    }
+
+    @Override
+    public Produto obterPorId(int id) {
+        for(Produto produto : produtos){
+            if(produto.getId() == id){
+                return produto;
+            }
+        }
+        return null;
     }
     
  
