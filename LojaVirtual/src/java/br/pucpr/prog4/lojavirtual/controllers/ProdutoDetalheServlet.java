@@ -10,6 +10,7 @@ import br.pucpr.prog4.lojavirtual.models.Produto;
 import br.pucpr.prog4.lojavirtual.models.ProdutoManager;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -56,7 +57,7 @@ public class ProdutoDetalheServlet extends HttpServlet {
         
         String view;
         view = "/WEB-INF/jsp/produto-detalhe.jsp";
-        RequestDispathcer rd;
+        RequestDispatcher rd;
         rd = request.getRequestDispatcher(view);
         rd.forward(request, response);
         
